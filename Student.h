@@ -11,12 +11,12 @@ class Student {
     int    _id    = 0;
     float  _avg   = 0;
 public:
-    Student() = default;
+    Student();
     Student(const string& first, const string& last, int id, float avg);
-    int getID() const;
-    int getAvg() const;
-    const string& getFirst() const;
-    const string& getLast() const;
+    [[nodiscard]] int getID() const;
+    [[nodiscard]] int getAvg() const;
+    [[nodiscard]] const string& getFirst() const;
+    [[nodiscard]] const string& getLast() const;
     void print() const;
 };
 

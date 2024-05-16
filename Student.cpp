@@ -3,6 +3,8 @@
 
 using std::cout, std::endl;
 
+Student::Student() = default;
+
 Student::Student(const string& first,
                  const string& last,
                  int id,
@@ -12,18 +14,23 @@ Student::Student(const string& first,
     , _id(id)
     , _avg(avg) {}
 
-int Student::getID() const {
+[[nodiscard]] int Student::getID() const {
     return _id;
 }
 
-int Student::getAvg() const {
+[[nodiscard]] int Student::getAvg() const {
     return _avg;
 }
 
-const string& Student::getFirst() const {
+[[nodiscard]] const string& Student::getFirst() const {
     return _first;
 }
 
-const string& Student::getLast() const {
+[[nodiscard]] const string& Student::getLast() const {
     return _last;
+}
+
+void Student::print() const {
+    cout << _first << " " << _last << " ";
+    cout << _id << " " << _avg << endl;
 }
