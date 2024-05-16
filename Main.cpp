@@ -1,20 +1,18 @@
 #include <iostream>
-#include <vector>
-#include "student.h"
+#include "Course.h"
 
-using std::cout, std::endl, std::string, std::vector;
-
-void cppVectors();
+using std::cout, std::endl, std::string;
 
 int main() {
-//    cppVectors();
+    Student s1;
+    Student s2("Dave", "Churchill", 1, 3.14);
+    Student s3("Bruce", "Lee", 7359, 3.99);
+
+    Course c;
+    c.addStudent(s1); c.addStudent(s2); c.addStudent(s3);
+
+    c.loadFromFile("students.txt");
+    c.print();
+
     return 0;
-}
-
-void cppVectors() {
-    vector<float> nums = {11.2f, 22.1f, 33, 44, 55};
-
-    for (auto val : nums) {
-        cout << val << '\n';
-    } cout << '\n';
 }
