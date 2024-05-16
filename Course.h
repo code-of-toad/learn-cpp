@@ -16,7 +16,8 @@ public:
     [[nodiscard]] const vector<Student>& getStudents() const;
     void addStudent(const Student& s);
     void loadFromFile(const string& filename);
-    void print() const;
+    void printCourse() const;
+    void printStudents() const;
 };
 
 #endif //LEARN_CPP_COURSE_H

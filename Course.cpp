@@ -1,6 +1,8 @@
 #include "Course.h"
 #include <fstream>
 
+using std::cout, std::endl, std::string;
+
 Course::Course() = default;
 
 Course::Course(const string& name)
@@ -31,7 +33,11 @@ void Course::loadFromFile(const string& filename) {
     }
 }
 
-void Course::print() const {
+void Course::printCourse() const {
+    cout << _name << endl;
+}
+
+void Course::printStudents() const {
     for (const auto& s: _students) {
         s.print();
     }

@@ -13,10 +13,10 @@ class Student {
 public:
     Student();
     Student(const string& first, const string& last, int id, float avg);
-    [[nodiscard]] int getID() const;
-    [[nodiscard]] int getAvg() const;
     [[nodiscard]] const string& getFirst() const;
     [[nodiscard]] const string& getLast() const;
+    [[nodiscard]] int getID() const;
+    [[nodiscard]] float getAvg() const;
     void print() const;
 };
 

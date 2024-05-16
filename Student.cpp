@@ -14,20 +14,20 @@ Student::Student(const string& first,
     , _id(id)
     , _avg(avg) {}
 
-[[nodiscard]] int Student::getID() const {
-    return _id;
-}
-
-[[nodiscard]] int Student::getAvg() const {
-    return _avg;
-}
-
 [[nodiscard]] const string& Student::getFirst() const {
     return _first;
 }
 
 [[nodiscard]] const string& Student::getLast() const {
     return _last;
+}
+
+[[nodiscard]] int Student::getID() const {
+    return _id;
+}
+
+[[nodiscard]] float Student::getAvg() const {
+    return _avg;
 }
 
 void Student::print() const {
