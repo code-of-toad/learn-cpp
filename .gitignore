@@ -33,5 +33,4 @@
 
 # USER ADDED
 .idea
-CMakeLists.txt
 cmake-build-debug
